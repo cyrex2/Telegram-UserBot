@@ -27,9 +27,8 @@ from sedenbot.events import sedenify
 
 # ========================= CONSTANTS ============================
 DEF_UNAPPROVED_MSG = PM_UNAPPROVED or ("`Hey! Bu bir bot. Endişelenme.\n\n`"
-                  "`Sahibim sana PM atma izni vermedi. `"
-                  "`Lütfen sahibimin aktif olmasını bekleyin, o genellikle PM'leri onaylar.\n\n`"
-                  "`Bildiğim kadarıyla o kafayı yemiş insanlara PM izni vermiyor.`")
+                  "`Bak güzel kardeşim günde 100 kişi bu adama yazıyor. Seni pek gözüm ısırmadı ama mesaj yazdığını ona ileteceğim.\n\n`"
+                  "`O gelene kadar yapman gereken tek şey beklemek...`")
 # =================================================================
 @sedenify(incoming=True, disable_edited=True)
 async def permitpm(event):
@@ -78,8 +77,8 @@ async def permitpm(event):
 
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
-                        "`Sen benim sahibimin PM'ini spamlıyorsun, bu benim hoşuma gitmiyor.`\n"
-                        "`Şu an ENGELLENDIN ve SPAM olarak bildirildin, ileride değişiklik olmadığı sürece..`"
+                        "`Sana beklemeni tavsiye etmiştim. Uyarımı dikkate almamışsın.`\n"
+                        "`Şu an için HAKLANDIN ve SPERM olarak bildirildin, ileride değişiklik yapmadığım sürece..`"
                     )
 
                     try:
